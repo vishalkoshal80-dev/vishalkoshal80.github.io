@@ -9,6 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
+
+    #particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
     :root {
       --bg:#0f172a;
       --card:#1e293b;
@@ -124,9 +131,9 @@
   </style>
 </head>
 <body>
-
+<div id="particles-js"></div>
 <header>
-  <h1>Vishal Koshal</h1>
+  <h1 id="typing"></h1>
   <p>Java | Python | C++ Developer • DSA Enthusiast</p>
 </header>
 
@@ -179,6 +186,28 @@
 <footer>
   <p>© 2026 Vishal Koshal • Built with ❤️</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
+<script>
+var typed = new Typed("#typing", {
+  strings: ["Vishal Koshal", "Java Developer", "DSA Enthusiast", "Future Software Engineer"],
+  typeSpeed: 60,
+  backSpeed: 40,
+  loop: true
+});
+</script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true }
+  }
+});
+</script>
 </body>
 </html>
